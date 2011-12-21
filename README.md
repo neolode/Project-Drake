@@ -33,14 +33,18 @@ Tested on:
 
 **Version 0.0.9b:**
 --------------
--Removed the &quot;Hidden Dockbar&quot; 
+-Removed the &quot;Hidden Dockbar
+
 (sorry if you used it :( but it was impacting performance)
 
 **Version 0.0.9:**
 --------------
 -Alterations to some of the graphic resources
+
 -First public testing version
+
 -Removed some things I decided not to support
+
 -Small fixes for some FCs
 
 **Version 0.0.8:**
