@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="adw_changelog">
+-&lt;b&gt;NOTICE:&lt;/b&gt; This is based of ADW.Launcher&lt;br&gt;&lt;br&gt;
+-&lt;b&gt;NOTICE:&lt;/b&gt; To add/remove screens press MENU/Edit&lt;br&gt;&lt;br&gt;
+-&lt;b&gt;NOTICE:&lt;/b&gt; To enable ORIENTATION, disable PERSISTENCE.&lt;br&gt;&lt;br&gt;
+-&lt;b&gt;REMEMBER:&lt;/b&gt; You can hide apps from the drawer by using the custom catalogs (press menu key while the drawer is open) &lt;br&gt;&lt;br&gt;
+&lt;i&gt; Hatchling&lt;/i&gt;&lt;br&gt;
+Tested on: &lt;br&gt;
+  *I9000 CM7.1-nightly &lt;br&gt;
+  *I5500 CM7.1 &quot;Galaxy 5&quot; 1.2&lt;br&gt;
+  *ICS emulator&lt;br&gt;
+&lt;b&gt;Version 0.1.1:&lt;/b&gt;&lt;br&gt;
+&lt;b&gt;--------------&lt;/b&gt;&lt;br&gt;
+-Fixed the bug that caused the desktop dots to show when using the 5 item dock&lt;br&gt;
+-Fixed the bug that occurred when trying to drag a shortcut out of the app drawer and the drawer would not close &lt;br&gt;
+&lt;b&gt;Version 0.1.0:&lt;/b&gt;&lt;br&gt;
+&lt;b&gt;--------------&lt;/b&gt;&lt;br&gt;
+-Cleaned up redundant resource entries and graphic elements&lt;br&gt;
+-Fixed a FC that appeared when adding/launching a launcher action from the dock&lt;br&gt;
+&lt;b&gt;Version 0.0.9b:&lt;/b&gt;&lt;br&gt;
+&lt;b&gt;--------------&lt;/b&gt;&lt;br&gt;
+-Removed the &quot;Hidden Dockbar&quot; 
+(sorry if you used it :( but it was impacting performance)&lt;br&gt;
+&lt;b&gt;Version 0.0.9:&lt;/b&gt;&lt;br&gt;
+&lt;b&gt;--------------&lt;/b&gt;&lt;br&gt;
+-Alterations to some of the graphic resources &lt;br&gt;
+-First public testing version &lt;br&gt;
+-Removed some things I decided not to support &lt;br&gt;
+-Small fixes for some FCs &lt;br&gt;
+&lt;b&gt;Version 0.0.8:&lt;/b&gt;&lt;br&gt;
+&lt;b&gt;--------------&lt;/b&gt;&lt;br&gt;
+-Initial release to testers&lt;br&gt;
+&lt;br&gt;
+I would like to thank the team behind ADW.Launcher them for the great work they did and for making it open source.
+&lt;br&gt;
+I would also like to thank every one who has chosen to use Drake.
+</string>
+</resources>
