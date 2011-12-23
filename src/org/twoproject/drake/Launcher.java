@@ -1423,7 +1423,7 @@ public final class Launcher extends Activity implements View.OnClickListener, On
                 .setIcon(android.R.drawable.ic_menu_preferences).setAlphabeticShortcut('P')
                 .setIntent(settings);
 		//ADW: add custom settings
-        menu.add(MENU_GROUP_NORMAL, MENU_ALMOSTNEXUS, 0, R.string.menu_adw_settings)
+        menu.add(MENU_GROUP_NORMAL, MENU_ALMOSTNEXUS, 0, R.string.menu_drake_settings)
                 .setIcon(android.R.drawable.ic_menu_view)
                 .setAlphabeticShortcut('X');
 
@@ -1584,7 +1584,7 @@ public final class Launcher extends Activity implements View.OnClickListener, On
 	            				onActivityResult(REQUEST_CREATE_APPWIDGET, Activity.RESULT_CANCELED, data);
 	            				// Show a nice toast here to tell the user why the widget is rejected.
 	            				new AlertDialog.Builder(this)
-	            					.setTitle(R.string.adw_version)
+	            					.setTitle(R.string.drake_version)
 	            					.setCancelable(true)
 	            					.setIcon(R.drawable.ic_launcher_home)
 	            					.setPositiveButton(getString(android.R.string.ok), null)

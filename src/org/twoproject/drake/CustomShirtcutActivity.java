@@ -35,7 +35,7 @@ import android.widget.ImageButton;
 import android.widget.ListAdapter;
 
 public class CustomShirtcutActivity extends Activity implements OnClickListener {
-	private static final String ACTION_ADW_PICK_ICON="org.twoproject.drake.icons.ACTION_PICK_ICON";
+	private static final String ACTION_DRAKE_PICK_ICON="org.twoproject.drake.icons.ACTION_PICK_ICON";
 	public static final String ACTION_LAUNCHERACTION = "org.twoproject.drake.action.launcheraction";
 	public static final String EXTRA_APPLICATIONINFO = "EXTRA_APPLICATIONINFO";
 
@@ -456,7 +456,7 @@ public class CustomShirtcutActivity extends Activity implements OnClickListener 
 				break;
 			case 2:
 				//Icon packs
-				Intent packIntent=new Intent(ACTION_ADW_PICK_ICON);
+				Intent packIntent=new Intent(ACTION_DRAKE_PICK_ICON);
 				startActivityForResult(Intent.createChooser(packIntent, getString(R.string.shirtcuts_select_icon_pack)), PICK_FROM_ICON_PACK);
 				break;
 

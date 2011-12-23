@@ -330,7 +330,7 @@ public final class AlmostNexusSettingsHelper {
 		if(config){
 			SharedPreferences sp = context.getSharedPreferences(ALMOSTNEXUS_PREFERENCES, Context.MODE_PRIVATE);
 			String readV = sp.getString("changelogReadVersion", "0");
-			String actualV=context.getString(R.string.adw_version);
+			String actualV=context.getString(R.string.drake_version);
 			boolean ret=!readV.equals(actualV);
 			if(ret){
 				//Once verified and showed, disable it ultill the next update
@@ -349,8 +349,8 @@ public final class AlmostNexusSettingsHelper {
 	public static class ChangelogDialogBuilder {
 		public static AlertDialog create( Context context ) throws NameNotFoundException {
 
-			String aboutTitle = String.format("%s Changelog", context.getString(R.string.adw_version));
-			Spanned aboutText = Html.fromHtml(context.getString(R.string.adw_changelog, TextView.BufferType.SPANNABLE));
+			String aboutTitle = String.format("%s Changelog", context.getString(R.string.drake_version));
+			Spanned aboutText = Html.fromHtml(context.getString(R.string.drake_changelog, TextView.BufferType.SPANNABLE));
 
 			// Set up the holder scrollview
 			ScrollView mainView=new ScrollView(context);

@@ -92,7 +92,7 @@
     <string name="menu_search">Search</string>
     <!-- Noun, menu item used to show the system settings -->
     <string name="menu_settings">Settings</string>
-    <string name="menu_adw_settings">Customize</string>
+    <string name="menu_drake_settings">Customize</string>
 
     <!-- Permissions: -->
     <string name="permlab_install_shortcut">install shortcuts</string>
@@ -114,7 +114,7 @@
     <!-- Text to show user in place of a gadget when we can't display it properly -->
     <string name="gadget_error_text">Problem loading widget</string>
     <!-- ADW Version Information -->
-    <string name="adw_version">0.1.1 Hatchling</string>
+    <string name="drake_version">0.1.1 Hatchling</string>
     <!-- ADW Settings -->
     <string name="pref_label_settings">Customize Drake</string>
     <!-- Screen preferences -->
@@ -204,7 +204,7 @@
     <string name="pref_summary_hide_icon_labels">Hide desktop icon labels</string>
 
     <string name="pref_title_build_info">Build Information</string>
-    <string name="pref_title_adw_version">Version</string>
+    <string name="pref_title_drake_version">Version</string>
 
     <string name="pref_title_icon_highlights">Highlights press color</string>
     <string name="pref_summary_icon_highlights">Set the color for icon press</string>
@@ -348,10 +348,10 @@
 	<string name="rename_group_label">Catalog Name</string>
 	<string name="show_catalog">Show Catalog \"%s\"</string>
 	
-	<string name="pref_title_adw_restart">Restart Drake</string>
-	<string name="pref_summary_adw_restart">Close and restart Drake</string>
-	<string name="pref_title_adw_reset">Reset Drake</string>
-	<string name="pref_summary_adw_reset">Clear Drake settings and restart</string>
+	<string name="pref_title_drake_restart">Restart Drake</string>
+	<string name="pref_summary_drake_restart">Close and restart Drake</string>
+	<string name="pref_title_drake_reset">Reset Drake</string>
+	<string name="pref_summary_drake_reset">Clear Drake settings and restart</string>
 	
 	<string name="need_scrollable">The widget you want to add needs \'scrollable widgets support\' which is currently disabled.\nDo you want to enable it now?</string>
 	<string name="scrollable_api_required">This widget needs an updated version of Drake.\nPlease update or contact widget developer</string>

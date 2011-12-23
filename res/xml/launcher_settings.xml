@@ -315,16 +315,16 @@
 	</PreferenceScreen>	
 	<PreferenceCategory android:title="@string/pref_title_build_info">
 		<Preference
-			android:key="adw_version"
-			android:title="@string/pref_title_adw_version"
-			android:summary="@string/adw_version"/>
+			android:key="drake_version"
+			android:title="@string/pref_title_drake_version"
+			android:summary="@string/drake_version"/>
 		<Preference
-			android:key="adw_restart"
-			android:title="@string/pref_title_adw_restart"
-			android:summary="@string/pref_summary_adw_restart"/>
+			android:key="drake_restart"
+			android:title="@string/pref_title_drake_restart"
+			android:summary="@string/pref_summary_drake_restart"/>
 		<Preference
-			android:key="adw_reset"
-			android:title="@string/pref_title_adw_reset"
-			android:summary="@string/pref_summary_adw_reset"/>
+			android:key="drake_reset"
+			android:title="@string/pref_title_drake_reset"
+			android:summary="@string/pref_summary_drake_reset"/>
 	</PreferenceCategory>
 </PreferenceScreen>

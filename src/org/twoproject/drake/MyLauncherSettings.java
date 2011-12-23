@@ -134,8 +134,8 @@ public class MyLauncherSettings extends PreferenceActivity implements OnPreferen
         }
         mContext=this;
         //ADW: restart and reset preferences
-        Preference restart=findPreference("adw_restart");
-        Preference reset=findPreference("adw_reset");
+        Preference restart=findPreference("drake_restart");
+        Preference reset=findPreference("drake_reset");
         restart.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 			public boolean onPreferenceClick(Preference preference) {
 				shouldRestart=true;
@@ -147,7 +147,7 @@ public class MyLauncherSettings extends PreferenceActivity implements OnPreferen
 			public boolean onPreferenceClick(Preference preference) {
                 AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
                 alertDialog.setTitle(getResources().getString(R.string.title_dialog_xml));
-                alertDialog.setMessage(getResources().getString(R.string.pref_summary_adw_reset));
+                alertDialog.setMessage(getResources().getString(R.string.pref_summary_drake_reset));
                 alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, getResources().getString(android.R.string.ok),
                     new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
@@ -174,8 +174,8 @@ public class MyLauncherSettings extends PreferenceActivity implements OnPreferen
         }
 
         //Changelog screen
-        Preference adw_version=findPreference("adw_version");
-        adw_version.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+        Preference drake_version=findPreference("drake_version");
+        drake_version.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 			public boolean onPreferenceClick(Preference preference) {
 		        try {
 		        	AlertDialog builder = AlmostNexusSettingsHelper.ChangelogDialogBuilder.create(mContext);

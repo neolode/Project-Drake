@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="adw_changelog">
+<string name="drake_changelog">
 -&lt;b&gt;NOTICE:&lt;/b&gt; This is based of ADW.Launcher&lt;br&gt;&lt;br&gt;
 -&lt;b&gt;NOTICE:&lt;/b&gt; To add/remove screens press MENU/Edit&lt;br&gt;&lt;br&gt;
 -&lt;b&gt;NOTICE:&lt;/b&gt; To enable ORIENTATION, disable PERSISTENCE.&lt;br&gt;&lt;br&gt;
