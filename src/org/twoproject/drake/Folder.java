@@ -20,6 +20,7 @@ package org.twoproject.drake;
 import android.content.Context;
 import android.graphics.Rect;
 import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -50,6 +51,7 @@ public class Folder extends LinearLayout implements DragSource, OnItemLongClickL
      * Which item is being dragged
      */
     protected ApplicationInfo mDragItem;
+    private FolderIcon mFolderIcon;
     /**
      * ADW:Theme vars
      */
@@ -128,6 +130,9 @@ public class Folder extends LinearLayout implements DragSource, OnItemLongClickL
     public void onDropCompleted(View target, boolean success) {
     }
 
+    void setFolderIcon(FolderIcon icon) {
+        mFolderIcon = icon;
+    }
     /**
      * Sets the adapter used to populate the content area. The adapter must only
      * contains ApplicationInfo items.
@@ -137,7 +142,18 @@ public class Folder extends LinearLayout implements DragSource, OnItemLongClickL
     void setContentAdapter(BaseAdapter adapter) {
         mContent.setAdapter(adapter);
     }
-
+	
+    /**
+     * Creates a new UserFolder, inflated from R.layout.user_folder.
+     *
+     * @param context The application's context.
+     *
+     * @return A new UserFolder.
+     */
+    static Folder fromXml(Context context) {
+        return (Folder) LayoutInflater.from(context).inflate(R.layout.user_folder, null);
+    }
+	
     void notifyDataSetChanged() {
         ((BaseAdapter) mContent.getAdapter()).notifyDataSetChanged();
     }

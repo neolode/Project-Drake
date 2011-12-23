@@ -18,7 +18,6 @@ package org.twoproject.drake;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-
 import android.content.ContentValues;
 import android.graphics.Bitmap;
 import android.util.Log;

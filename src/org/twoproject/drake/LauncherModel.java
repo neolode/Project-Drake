@@ -1709,4 +1709,11 @@ public class LauncherModel {
             //Sync issue........
         }
     }
+    static ComponentName getComponentNameFromResolveInfo(ResolveInfo info) {
+        if (info.activityInfo != null) {
+            return new ComponentName(info.activityInfo.packageName, info.activityInfo.name);
+        } else {
+            return new ComponentName(info.serviceInfo.packageName, info.serviceInfo.name);
+        }
+    }
 }

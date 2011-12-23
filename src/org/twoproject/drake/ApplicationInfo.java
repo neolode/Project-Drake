@@ -19,15 +19,22 @@ package org.twoproject.drake;
 import android.content.ComponentName;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import org.twoproject.drake.R;
+import android.util.Log;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Represents a launchable application. An application is made of a name (or title),
  * an intent and an icon.
  */
 public class ApplicationInfo extends ItemInfo {
+    private static final String TAG = "Launcher.ApplicationInfo";
     /**
      * The "unread counter" notification
      */
@@ -50,6 +57,11 @@ public class ApplicationInfo extends ItemInfo {
      * The application icon.
      */
     public Drawable icon;
+	
+	/**
+     * A bitmap version of the application icon.
+     */
+    Bitmap iconBitmap;
 
     /**
      * When set to true, indicates that the icon has been resized.
@@ -69,11 +81,42 @@ public class ApplicationInfo extends ItemInfo {
      * shortcut icon as an application's resource.
      */
     Intent.ShortcutIconResource iconResource;
+	
+	ComponentName componentName;
 
     ApplicationInfo() {
         itemType = LauncherSettings.BaseLauncherColumns.ITEM_TYPE_SHORTCUT;
     }
 
+    /**
+     * Must not hold the Context.
+     */
+    public ApplicationInfo(PackageManager pm, ResolveInfo info, IconCache iconCache,
+            HashMap<Object, CharSequence> labelCache) {
+        final String packageName = info.activityInfo.applicationInfo.packageName;
+
+        this.componentName = new ComponentName(packageName, info.activityInfo.name);
+        this.container = ItemInfo.NO_ID;
+        this.setActivity(componentName,
+                Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+
+        try {
+            int appFlags = pm.getApplicationInfo(packageName, 0).flags;
+//            if ((appFlags & android.content.pm.ApplicationInfo.FLAG_SYSTEM) == 0) {
+//                flags |= DOWNLOADED_FLAG;
+//
+//                if ((appFlags & android.content.pm.ApplicationInfo.FLAG_UPDATED_SYSTEM_APP) != 0) {
+//                    flags |= UPDATED_SYSTEM_APP_FLAG;
+//                }
+//            }
+//            firstInstallTime = pm.getPackageInfo(packageName, 0).firstInstallTime;
+        } catch (NameNotFoundException e) {
+            Log.d(TAG, "PackageManager.getApplicationInfo failed for " + packageName);
+        }
+
+        iconCache.getTitleAndIcon(this, info, labelCache);
+    }
+	
     public ApplicationInfo(ApplicationInfo info) {
         super(info);
         assignFrom(info);
@@ -113,6 +156,11 @@ public class ApplicationInfo extends ItemInfo {
         intent.setFlags(launchFlags);
         itemType = LauncherSettings.BaseLauncherColumns.ITEM_TYPE_APPLICATION;
     }
+	@Override
+	public String toString() {
+		return title.toString();
+	}
+
 
     @Override
     void onAddToDatabase(ContentValues values) {
@@ -140,11 +188,6 @@ public class ApplicationInfo extends ItemInfo {
             }
         }
     }
-
-	@Override
-	public String toString() {
-		return title.toString();
-	}
 
 
 	/*@Override

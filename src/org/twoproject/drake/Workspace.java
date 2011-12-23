@@ -96,6 +96,7 @@ public class Workspace extends WidgetSpace implements DropTarget, DragSource, Dr
     private OnLongClickListener mLongClickListener;
 
     private Launcher mLauncher;
+    private IconCache mIconCache;
     private DragController mDragger;
 
     private boolean mTouchedScrollableWidget = false;
@@ -227,6 +228,10 @@ public class Workspace extends WidgetSpace implements DropTarget, DragSource, Dr
         mDesktopRows=AlmostNexusSettingsHelper.getDesktopRows(getContext());
         mDesktopColumns=AlmostNexusSettingsHelper.getDesktopColumns(getContext());
         mDesktopCacheType=AlmostNexusSettingsHelper.getScreenCache(getContext());
+        
+        Context context = getContext();
+        LauncherApplication app = (LauncherApplication)context.getApplicationContext();
+        mIconCache = app.getIconCache();
     }
 
     @Override
@@ -281,6 +286,7 @@ public class Workspace extends WidgetSpace implements DropTarget, DragSource, Dr
         if(currentScreen==null)return null;
         int count = currentScreen.getChildCount();
         for (int i = 0; i < count; i++) {
+        
             View child = currentScreen.getChildAt(i);
             CellLayout.LayoutParams lp = (CellLayout.LayoutParams) child.getLayoutParams();
             if (lp.cellHSpan == mDesktopColumns && lp.cellVSpan == mDesktopRows && child instanceof Folder) {
@@ -1172,7 +1178,7 @@ public class Workspace extends WidgetSpace implements DropTarget, DragSource, Dr
             break;
         case LauncherSettings.Favorites.ITEM_TYPE_USER_FOLDER:
             view = FolderIcon.fromXml(R.layout.folder_icon, mLauncher,
-                    (ViewGroup) getChildAt(mCurrentScreen), ((UserFolderInfo) info));
+                    (ViewGroup) getChildAt(mCurrentScreen), ((UserFolderInfo) info), null);
             break;
         case LauncherSettings.Favorites.ITEM_TYPE_LIVE_FOLDER:
             view = LiveFolderIcon.fromXml(
@@ -2088,5 +2094,10 @@ public class Workspace extends WidgetSpace implements DropTarget, DragSource, Dr
         super.onSizeChanged(w, h, oldw, oldh);
         if(mLauncher!=null)mWallpaperY=h - mLauncher.getWindow().getDecorView().getHeight();
     }
+
+	public boolean isSmall() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 }

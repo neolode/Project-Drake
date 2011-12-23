@@ -20,8 +20,13 @@ import android.app.Application;
 import org.twoproject.drake.R;
 
 public class LauncherApplication extends Application {
+    public IconCache mIconCache;
     @Override
     public void onCreate() {
         super.onCreate();
+        mIconCache = new IconCache(this);
+    }
+    IconCache getIconCache() {
+        return mIconCache;
     }
 }

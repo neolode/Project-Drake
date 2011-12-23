@@ -257,6 +257,9 @@ public final class Launcher extends Activity implements View.OnClickListener, On
     private Bundle mSavedInstanceState;
 
 	private DesktopBinder mBinder;
+	
+    private IconCache mIconCache;
+	
 	/**
 	 * ADW: New views/elements for dots, dockbar, lab/rab, etc
 	 */
@@ -373,6 +376,10 @@ public final class Launcher extends Activity implements View.OnClickListener, On
 		}
         mBlockDesktop=AlmostNexusSettingsHelper.getDesktopBlocked(this);
     	super.onCreate(savedInstanceState);
+        LauncherApplication app = ((LauncherApplication)getApplication());
+        
+        mIconCache = app.getIconCache();
+        
         mInflater = getLayoutInflater();
 
 		AppCatalogueFilters.getInstance().init(this);
@@ -1698,7 +1705,7 @@ public final class Launcher extends Activity implements View.OnClickListener, On
 
         // Create the view
         FolderIcon newFolder = FolderIcon.fromXml(R.layout.folder_icon, this,
-                (ViewGroup) mWorkspace.getChildAt(mWorkspace.getCurrentScreen()), folderInfo);
+                (ViewGroup) mWorkspace.getChildAt(mWorkspace.getCurrentScreen()), folderInfo, mIconCache);
         if(themeFont!=null)((TextView)newFolder).setTypeface(themeFont);
         mWorkspace.addInCurrentScreen(newFolder,
                 cellInfo.cellX, cellInfo.cellY, 1, 1, insertAtFirst);
@@ -2052,7 +2059,7 @@ public final class Launcher extends Activity implements View.OnClickListener, On
 		                case LauncherSettings.Favorites.ITEM_TYPE_USER_FOLDER:
 		                    final FolderIcon newFolder = FolderIcon.fromXml(R.layout.folder_icon, this,
 		                            (ViewGroup) workspace.getChildAt(workspace.getCurrentScreen()),
-		                            (UserFolderInfo) item);
+		                            (UserFolderInfo) item, mIconCache);
 		                    if(themeFont!=null)((TextView)newFolder).setTypeface(themeFont);
 		                    workspace.addInScreen(newFolder, item.screen, item.cellX, item.cellY, 1, 1,
 		                            !desktopLocked);
