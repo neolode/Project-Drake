@@ -220,6 +220,7 @@ public final class Launcher extends Activity implements View.OnClickListener, On
 
     private DragLayer mDragLayer;
     private Workspace mWorkspace;
+	private DragController mDragController;
 
     private AppWidgetManager mAppWidgetManager;
     private LauncherAppWidgetHost mAppWidgetHost;
@@ -379,7 +380,7 @@ public final class Launcher extends Activity implements View.OnClickListener, On
         LauncherApplication app = ((LauncherApplication)getApplication());
         
         mIconCache = app.getIconCache();
-        
+        mDragController = new DragController(this);
         mInflater = getLayoutInflater();
 
 		AppCatalogueFilters.getInstance().init(this);
@@ -645,6 +646,7 @@ public final class Launcher extends Activity implements View.OnClickListener, On
     @Override
     protected void onPause() {
         super.onPause();
+		mDragController.cancelDrag();
         //ADW: removed cause it was closing app-drawer every time Home button is triggered
         //ADW: it should be done only on certain circumstances
         //closeDrawer(false);
@@ -744,6 +746,8 @@ public final class Launcher extends Activity implements View.OnClickListener, On
      * Finds all the views we need and configure them properly.
      */
     private void setupViews() {
+        final DragController dragController = mDragController;
+
         mDragLayer = (DragLayer) findViewById(R.id.drag_layer);
         final DragLayer dragLayer = mDragLayer;
 
@@ -1316,6 +1320,11 @@ public final class Launcher extends Activity implements View.OnClickListener, On
         unregisterReceiver(mCloseSystemDialogsReceiver);
         if(mCounterReceiver!=null)unregisterReceiver(mCounterReceiver);
         mWorkspace.unregisterProvider();
+        mDragController = null;
+    }
+
+    public DragController getDragController() {
+        return mDragController;
     }
 
     @Override
@@ -2314,6 +2323,14 @@ public final class Launcher extends Activity implements View.OnClickListener, On
         }else{
         	mWorkspace.addInScreen(openFolder, folderInfo.screen, 0, 0, mWorkspace.currentDesktopColumns(), mWorkspace.currentDesktopRows());
         }
+		
+		// Just verify that the folder hasn't already been added to the DragLayer.
+        // There was a one-off crash where the folder had a parent already.
+        if (folder.getParent() == null) {
+            //mDragLayer.addView(folder);
+            mDragController.addDropTarget((DropTarget) folder);
+        }
+		
         openFolder.onOpen();
         //ADW: closing drawer, removed from onpause
     	closeDrawer(false);
@@ -2360,7 +2377,7 @@ public final class Launcher extends Activity implements View.OnClickListener, On
             return true;
         }
 
-        if (mWorkspace.allowLongPress() && !mBlockDesktop) {
+        if (mWorkspace.allowLongPress() && !mBlockDesktop && !mDragController.isDragging()) {
             if (cellInfo.cell == null) {
                 if (cellInfo.valid) {
                     // User long pressed on empty space
