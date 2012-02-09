@@ -131,8 +131,8 @@ public class Workspace extends WidgetSpace implements DropTarget, DragSource, Dr
     private int mWallpaperHeight;
     private float mWallpaperOffset;
     private boolean mWallpaperLoaded;
-    private boolean lwpSupport=true;
-    private boolean wallpaperHack=true;
+    private boolean lwpSupport=false;//true;
+    private boolean wallpaperHack=false;//true;
     private BitmapDrawable mWallpaperDrawable;
     //ADW: speed for desktop transitions
     private int mScrollingSpeed=600;
