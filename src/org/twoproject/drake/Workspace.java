@@ -191,8 +191,8 @@ public class Workspace extends WidgetSpace implements DropTarget, DragSource, Dr
     public Workspace(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
-        mWallpaperManager = new DrakeWP(context,this);
-
+        mWallpaperManager = DrakeWP.getInstance(context);//new DrakeWP(context,this);
+        //mWallpaperManager.setWorkspace(this);
         /* Rogro82@xda Extended : Load the default and number of homescreens from the settings database */
         mHomeScreens = AlmostNexusSettingsHelper.getDesktopScreens(context);
         mDefaultScreen = AlmostNexusSettingsHelper.getDefaultScreen(context);
