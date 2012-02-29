@@ -68,7 +68,7 @@ public class CellLayout extends WidgetCellLayout {
     private boolean mDirtyTag;
     private boolean mLastDownOnOccupiedCell = false;
     
-    private final WallpaperManager mWallpaperManager;
+    private final DrakeWP mWallpaperManager;
     //ADW: We'll have fixed rows/columns
 	private int mRows;
 	private int mColumns;
@@ -118,7 +118,8 @@ public class CellLayout extends WidgetCellLayout {
             }
         }*/
         
-        mWallpaperManager = WallpaperManager.getInstance(getContext());
+        mWallpaperManager = DrakeWP.getInstance(getContext());
+        //mWallpaperManager = new DrakeWP(getContext(),wor);
         mDesktopCacheType=AlmostNexusSettingsHelper.getScreenCache(context);
     }
 

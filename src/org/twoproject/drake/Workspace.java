@@ -64,7 +64,7 @@ public class Workspace extends WidgetSpace implements DropTarget, DragSource, Dr
 
     private int mDefaultScreen;
 
-    private final WallpaperManager mWallpaperManager;
+    private final DrakeWP mWallpaperManager;
 
     private boolean mFirstLayout = true;
 
@@ -192,8 +192,8 @@ public class Workspace extends WidgetSpace implements DropTarget, DragSource, Dr
     public Workspace(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
-        mWallpaperManager = WallpaperManager.getInstance(context);
-
+        mWallpaperManager = DrakeWP.getInstance(context);//new DrakeWP(context,this);
+        //mWallpaperManager.setWorkspace(this);
         /* Rogro82@xda Extended : Load the default and number of homescreens from the settings database */
         mHomeScreens = AlmostNexusSettingsHelper.getDesktopScreens(context);
         mDefaultScreen = AlmostNexusSettingsHelper.getDefaultScreen(context);
@@ -1660,6 +1660,9 @@ public class Workspace extends WidgetSpace implements DropTarget, DragSource, Dr
 			lwpSupport=false;
 		}
 		mLauncher.setWindowBackground(lwpSupport);
+//		mWallpaperDrawable=null;
+//		mWallpaperLoaded=false;
+//		mLauncher.setWindowBackground(false);
 		invalidate();
 		requestLayout();
 	}
