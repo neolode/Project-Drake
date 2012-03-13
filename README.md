@@ -1,4 +1,4 @@
-- **NOTICE** This is based of ADW.Launcher.
+- **NOTICE** This is based of ADW.Launcher open source.
 
 - **NOTICE**  To add/remove screens press MENU/Edit.
 
@@ -10,14 +10,32 @@
 
 Tested on:
 
-  - I9000 CM7.1-nightly
+  - I9000 CM9-alpha
   
   - I5500 CM7.1 Galaxy 5 1.2
   
-  - ICS emulator
+  - SE X8 CM7.1
+  
+  - Amazon Kindle Fire Stock 6.2.2 (GB 2.3.5)
+  
+  - ICS 4.0.3 emulator
+
+  
+*Whelp*
+--------------
+**Version 0.2/RC1(future release)(broken build see branch)**
+--------------
+- Backporting ICS style homescreen folders
+- Brand new Customize screen
+
 
 *Hatchling*
 --------------
+**Version 0.1.2(unreleased):**
+--------------
+- Partial fix for the Kindle Fire (no more FC but no wallpaper support and homescreen ghosting)
+
+
 **Version 0.1.1:**
 --------------
 - Fixed the bug that caused the desktop dots to show when using the 5 item dock
