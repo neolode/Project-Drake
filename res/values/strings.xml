@@ -114,7 +114,7 @@
     <!-- Text to show user in place of a gadget when we can't display it properly -->
     <string name="gadget_error_text">Problem loading widget</string>
     <!-- ADW Version Information -->
-    <string name="drake_version">0.1.1 Hatchling</string>
+    <string name="drake_version">0.1.2 Hatchling</string>
     <!-- ADW Settings -->
     <string name="pref_label_settings">Customize Drake</string>
     <!-- Screen preferences -->
@@ -171,8 +171,8 @@
     <string name="pref_summary_drawer_rows_landscape">Select the number of drawer rows to use on landscape layout</string>
     <string name="pref_dialog_drawer_rows_landscape">Select the number of drawer rows to use on landscape layout</string>
 
-    <string name="pref_title_sense_previews">Sense previews</string>
-    <string name="pref_summary_sense_previews">Use the new sense-like implementation</string>
+    <string name="pref_title_sense_previews">Leap style previews</string>
+    <string name="pref_summary_sense_previews">Use Leap-like homescreens preview</string>
 
     <!-- Button preferences -->
     <string name="pref_title_ui_settings">UI Settings</string>
@@ -336,17 +336,17 @@
 	<string name="shirtcuts_select_icon_pack">Select icon pack</string>
 
 	<string name="selectAll">Select all</string>
-	<string name="AppGroupAll">"ALL"</string>
-	<string name="AppGroupAdd">"New Catalog"</string>
-	<string name="AppGroupDel">"Remove Catalog"</string>
-    <string name="AppGroupDelLong">"Really Remove\nCurrent Catalog?"</string>
+	<string name="AppGroupAll">"All Apps"</string>
+	<string name="AppGroupAdd">"New Group"</string>
+	<string name="AppGroupDel">"Remove Group"</string>
+    <string name="AppGroupDelLong">"Really Remove\nCurrent Group?"</string>
 	<string name="AppGroupChoose">"Choose Group"</string>
 	<string name="AppGroupConfig">"Setup Group"</string>
-	<string name="AppGroupRename">"New Catalog"</string>
+	<string name="AppGroupRename">"New Group"</string>
 	<string name="AppGroupConfigError">"You can not setup this group"</string>
-	<string name="rename_group_title">New Catalog</string>
-	<string name="rename_group_label">Catalog Name</string>
-	<string name="show_catalog">Show Catalog \"%s\"</string>
+	<string name="rename_group_title">New Group</string>
+	<string name="rename_group_label">Group Name</string>
+	<string name="show_catalog">Show Group \"%s\"</string>
 	
 	<string name="pref_title_drake_restart">Restart Drake</string>
 	<string name="pref_summary_drake_restart">Close and restart Drake</string>
@@ -356,8 +356,8 @@
 	<string name="need_scrollable">The widget you want to add needs \'scrollable widgets support\' which is currently disabled.\nDo you want to enable it now?</string>
 	<string name="scrollable_api_required">This widget needs an updated version of Drake.\nPlease update or contact widget developer</string>
     
-    <string name="pref_title_drawer_navigate_catalogs">Catalogs navigation</string>
-    <string name="pref_summary_drawer_navigate_catalogs">Show app catalogs navigation buttons</string>
+    <string name="pref_title_drawer_navigate_catalogs">App Group navigation</string>
+    <string name="pref_summary_drawer_navigate_catalogs">Show app group navigation buttons</string>
     <string name="pref_title_notif_receiver">Show notifications</string>
     <string name="pref_summary_notif_receiver">Enable the global notification counters</string>
 

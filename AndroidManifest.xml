@@ -12,7 +12,7 @@
 		limitations under the License. */
 	-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	android:versionCode="34"
+	android:versionCode="36"
 	package="org.twoproject.drake"
 	android:versionName="@string/drake_version" android:installLocation="internalOnly">
 
@@ -57,7 +57,7 @@
 			android:screenOrientation="nosensor" android:windowSoftInputMode="stateUnspecified|adjustPan">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
-				<category android:name="android.intent.category.LAUNCHER" />
+				<!-- <category android:name="android.intent.category.LAUNCHER" /> -->
 				<category android:name="android.intent.category.HOME" />
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.MONKEY" />

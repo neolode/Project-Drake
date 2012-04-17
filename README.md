@@ -16,7 +16,7 @@ Tested on:
   
   - SE X8 CM7.1
   
-  - Amazon Kindle Fire Stock 6.2.2 (GB 2.3.5)
+  - Amazon Kindle Fire Stock 6.2.3 (GB 2.3.5)
   
   - ICS 4.0.3 emulator
 
@@ -31,9 +31,11 @@ Tested on:
 
 *Hatchling*
 --------------
-**Version 0.1.2(unreleased):**
+**Version 0.1.2:**
 --------------
 - Partial fix for the Kindle Fire (no more FC but no wallpaper support and homescreen ghosting)
+
+- Various small fixes and tweaks
 
 
 **Version 0.1.1:**
