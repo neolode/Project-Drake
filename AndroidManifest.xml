@@ -105,7 +105,7 @@
 			android:readPermission="org.twoproject.drake.permission.READ_SETTINGS" />
 		<activity android:name="org.twoproject.drake.catalogue.AppInfoMList"></activity>
 	</application>
-	<uses-sdk android:minSdkVersion="8"/>
+	<uses-sdk android:minSdkVersion="14"/>
 	<supports-screens android:largeScreens="true"
 		android:normalScreens="true" android:smallScreens="true"
 		android:anyDensity="true" />
