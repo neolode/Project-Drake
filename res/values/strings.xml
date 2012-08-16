@@ -114,7 +114,7 @@
     <!-- Text to show user in place of a gadget when we can't display it properly -->
     <string name="gadget_error_text">Problem loading widget</string>
     <!-- ADW Version Information -->
-    <string name="drake_version">0.1.1 Hatchling</string>
+    <string name="drake_version">0.2.0 Whelp</string>
     <!-- ADW Settings -->
     <string name="pref_label_settings">Customize Drake</string>
     <!-- Screen preferences -->

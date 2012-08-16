@@ -5,11 +5,14 @@
 -&lt;b&gt;NOTICE:&lt;/b&gt; To add/remove screens press MENU/Edit&lt;br&gt;&lt;br&gt;
 -&lt;b&gt;NOTICE:&lt;/b&gt; To enable ORIENTATION, disable PERSISTENCE.&lt;br&gt;&lt;br&gt;
 -&lt;b&gt;REMEMBER:&lt;/b&gt; You can hide apps from the drawer by using the custom catalogs (press menu key while the drawer is open) &lt;br&gt;&lt;br&gt;
-&lt;i&gt; Hatchling&lt;/i&gt;&lt;br&gt;
 Tested on: &lt;br&gt;
   *I9000 CM7.1-nightly &lt;br&gt;
   *I5500 CM7.1 &quot;Galaxy 5&quot; 1.2&lt;br&gt;
   *ICS emulator&lt;br&gt;
+&lt;i&gt; Whelp&lt;/i&gt;&lt;br&gt;
+&lt;b&gt;Version 0.2.0:&lt;/b&gt;&lt;br&gt;
+&lt;b&gt;--------------&lt;/b&gt;&lt;br&gt;
+&lt;i&gt; Hatchling&lt;/i&gt;&lt;br&gt;
 &lt;b&gt;Version 0.1.1:&lt;/b&gt;&lt;br&gt;
 &lt;b&gt;--------------&lt;/b&gt;&lt;br&gt;
 -Fixed the bug that caused the desktop dots to show when using the 5 item dock&lt;br&gt;
